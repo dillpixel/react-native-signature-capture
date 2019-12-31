@@ -86,6 +86,11 @@ class SignatureCapture extends React.Component {
             [],
         );
     }
+
+    removeListeners() {
+      this.subscriptions.forEach(sub => sub.remove());
+      this.subscriptions = [];
+    }
 }
 
 SignatureCapture.propTypes = {
